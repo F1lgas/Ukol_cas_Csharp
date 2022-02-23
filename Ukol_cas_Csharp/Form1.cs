@@ -16,5 +16,19 @@ namespace Ukol_cas_Csharp
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 frm2 = new Form2();
+            frm2.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form3 frm3 = new Form3();
+            frm3.ShowDialog();
+        }
     }
 }

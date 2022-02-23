@@ -33,16 +33,16 @@ namespace Ukol_cas_Csharp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string[] data = textBox1.Text.Split(';');
+            string data = textBox1.Text.Split(';')[3];
             DateTime datum = DateTime.Now;
             int i = 3;
 
-            while (i < textBox1.Lines.Count())
+            while (i <= textBox1.Lines.Count())
             {
-                if (Convert.ToDateTime(data[i]) > datum)
+                if (Convert.ToDateTime(textBox1.Lines[i]) < datum)
                 {
-                    jmeno = data[i - 2];
-                    prijmeni = data[i - 1];
+                    jmeno = textBox1.Lines[i - 2];
+                    prijmeni = textBox1.Lines[i - 1];
                 }
 
                 i = i + 3;

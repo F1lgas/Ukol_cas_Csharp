@@ -26,7 +26,7 @@ namespace Ukol_cas_Csharp
         {
             DateTime datum = DateTime.Now;
 
-            label1.Text = "Dnes je " + datum.ToString("D") + ". Je to 354. den v roce." + Environment.NewLine + "Je " + datum.ToString("HH") + " hodin, " + datum.ToString("mm") + " minut a " + datum.ToString("ss") + " sekund.";
+            label1.Text = "Dnes je " + datum.ToString("D") + ". Je to " + datum.DayOfYear + ". den v roce." + Environment.NewLine + "Je " + datum.ToString("HH") + " hodin, " + datum.ToString("mm") + " minut a " + datum.ToString("ss") + " sekund.";
         }
 
         private void button1_Click(object sender, EventArgs e)

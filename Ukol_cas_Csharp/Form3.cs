@@ -33,22 +33,30 @@ namespace Ukol_cas_Csharp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string data = textBox1.Text.Split(';')[3];
             DateTime datum = DateTime.Now;
-            int i = 3;
 
-            while (i <= textBox1.Lines.Count())
+            foreach (string line in textBox1.Lines)
             {
-                if (Convert.ToDateTime(textBox1.Lines[i]) < datum)
+                string data = line.Split(';')[2];              
+                
+                try
                 {
-                    jmeno = textBox1.Lines[i - 2];
-                    prijmeni = textBox1.Lines[i - 1];
-                }
+                    if (Convert.ToDateTime(data) < datum)
+                    {
+                        jmeno = line.Split(';')[0];
+                        prijmeni = line.Split(';')[1];
 
-                i = i + 3;
+                        datum = Convert.ToDateTime(data);
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Špatný vstup!", "Error");
+                    return;
+                }
             }
 
-            MessageBox.Show("Nejstarší člověk je " + jmeno + prijmeni);
+            MessageBox.Show("Nejstarší člověk je " + jmeno + " " + prijmeni);
         }
     }
 }

@@ -68,10 +68,10 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 26);
+            this.label1.Size = new System.Drawing.Size(202, 26);
             this.label1.TabIndex = 3;
-            this.label1.Text = "zadej ve formátu: nekdo;nekdo;1.1.2001\r\n                            nekdo;nekdo;2" +
-    ".2.2002";
+            this.label1.Text = "zadej ve formátu: nekdo;nekdo;1.1.2001;\r\n                            nekdo;nekdo;" +
+    "2.2.2002;";
             // 
             // Form3
             // 
